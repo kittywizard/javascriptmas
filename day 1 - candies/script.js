@@ -1,6 +1,8 @@
-//n children have m pieces of candy.
-//each child must eat the exact same amount of candy.
-//no splitting
 
-//math.floor
-//modulus?
+
+let kids = 3;
+let candy = 9;
+
+let candies = (kids, candies) =>  Math.floor(candies / kids) * kids;    
+
+console.log("Total number of candy is: " + candies(kids, candy));
