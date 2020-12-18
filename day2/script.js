@@ -1,9 +1,20 @@
 //deposit profit
 
-let deposit = 100;
+let deposit = 3100;
 let rate = 20;
-let threshold = 170;
+let threshold = 5000;
+let accountBalance = deposit;
+let years = 0;
 
-//every year, the amount of money in your account increases by 20% (the rate)
+function depositProfit(deposit, rate, threshold) {
+    const moneyPerYear = deposit * (rate / 100);
+    
+    while(accountBalance < threshold) {
+        accountBalance += moneyPerYear;
+        years++;
+    }
 
-//how many years does it take for your account to reach its threshold?
+    return years;
+}
+
+console.log(depositProfit(deposit, rate, threshold));
