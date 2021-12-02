@@ -61,3 +61,31 @@
   .snow {
       @include theme(var(--snow), var(--dark-green), #F0F4F7, 'Lobster Two')
   }
+
+  .toggle-container {
+      display: flex;
+
+  }
+  .toggle {
+      background-color: var(--gold);
+      border-radius: 20px;
+      width: 50px;
+      height:20px;
+      padding: 5px;
+      margin: 0 10px;
+
+    &-switch {
+        background-color: var(--bright-red);
+        width:20px;
+        height:20px;
+        border-radius: 20px;
+
+        transform: translateX(0);
+        transition: all 250ms;
+    }
+
+    .transform {
+            transform: translateX(30px);
+            background-color: var(--snow);
+    }
+  }

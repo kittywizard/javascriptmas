@@ -61,4 +61,29 @@ p {
   font-family: "Lobster Two", cursive;
 }
 
+.toggle-container {
+  display: flex;
+}
+
+.toggle {
+  background-color: var(--gold);
+  border-radius: 20px;
+  width: 50px;
+  height: 20px;
+  padding: 5px;
+  margin: 0 10px;
+}
+.toggle-switch {
+  background-color: var(--bright-red);
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  transform: translateX(0);
+  transition: all 250ms;
+}
+.toggle .transform {
+  transform: translateX(30px);
+  background-color: var(--snow);
+}
+
 /*# sourceMappingURL=index.css.map */
