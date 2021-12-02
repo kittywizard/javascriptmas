@@ -63,10 +63,11 @@ p {
 
 .toggle-container {
   display: flex;
+  font-size: 20px;
 }
 
 .toggle {
-  background-color: var(--gold);
+  background-color: var(--light-green);
   border-radius: 20px;
   width: 50px;
   height: 20px;
@@ -74,16 +75,15 @@ p {
   margin: 0 10px;
 }
 .toggle-switch {
-  background-color: var(--bright-red);
+  background-color: var(--snow);
   width: 20px;
   height: 20px;
   border-radius: 20px;
   transform: translateX(0);
-  transition: all 250ms;
+  transition: all 500ms;
 }
 .toggle .transform {
   transform: translateX(30px);
-  background-color: var(--snow);
 }
 
 /*# sourceMappingURL=index.css.map */
