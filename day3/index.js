@@ -1,18 +1,22 @@
 const greeting = document.getElementById("greeting")
 const btn = document.getElementById("btn")
+const container = document.querySelector('.container');
+
+
+btn.addEventListener('click', fix);
 
 function fix() {
-  // Task:
-  // - Write a function to fix the UI problems with this Christmas message (make it Christmassy!)
-  // - Run the function when the Fix button is clicked.
+    document.body.style.backgroundColor = "var(--dark-green)";
+    btn.style.display = 'none';
+
+    const slowChange = setInterval(() => {
+        container.classList.add('fix-container');
+    }, 2000);
+
+    const slowText = setInterval(() => {
+        greeting.textContent = '🎅🏻 Merry Christmas! 🎄'; //add emoji
+    }, 2000)
 }
-
-//Stretch goals:
-// - Add an extra theme, and the option to switch between them.
-// - Change the message and theme to a New Year’s one automatically on December 31st.
-
-
-
 
 
 
