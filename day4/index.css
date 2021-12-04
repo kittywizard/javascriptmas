@@ -21,6 +21,12 @@
       text-align: center;
       color: var(--snow);
       background-color: var(--bright-red);
+      font-family: 'Roboto', sans-serif;
+  }
+  
+  .headline {
+      font-family: 'Emilys Candy', cursive;
+      letter-spacing: 1.5px;
   }
   
   .checklist {
@@ -48,6 +54,11 @@
   input[type=checkbox]:checked + label.strikethrough{
     text-decoration: line-through;
     font-weight: normal;
+  }
+
+  .input-text {
+      margin: 0 0 0 0.3em;
+      display: inline;
   }
   
   
