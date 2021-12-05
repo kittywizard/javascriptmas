@@ -78,3 +78,8 @@
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
   }
+
+  #greeting-display {
+      color: var(--wine-red);
+      font-size: 3rem;
+  }
