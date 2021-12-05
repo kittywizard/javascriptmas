@@ -13,13 +13,13 @@
   }
   
   body {
-      background: var(--wine-red);
+      background: var(--dark-green);
       height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      font-family: 'Caveat', cursive;
+      font-family: 'Emilys Candy', cursive;
   }
   
   .card {
@@ -50,12 +50,31 @@
       padding: 0.5em 1em;
       border-radius: 5px;
       margin: 0 auto;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
   }
   
   button:hover {
       cursor: pointer;
   }
 
-  #submit {
-      /* form style */
+ 
+  .input {
+    background-color: var(--gold);
+    border: none;
+    padding: 0.5em 1em;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+
+  label {
+      font-family: sans-serif;
+      font-size: 1em;
+      font-weight: bold;
+      color: var(--snow);
+      padding: 1em 0.5em 1em 1em;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
   }

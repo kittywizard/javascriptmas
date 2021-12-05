@@ -25,6 +25,15 @@ const greetings = [
 function writeGreeting(to, from) {
     let randomNum = Math.floor((Math.random() * greetings.length) + 1);
     greetingDisplay.textContent = greetings[randomNum];
+
+    if(to == '') {
+        toDisplay.style.display = 'none';
+    }
+
+    if(from == '') {
+        fromDisplay.style.display = 'none';
+    }
+
     toDisplay.textContent = `To: ${to}`;
     fromDisplay.textContent = `From: ${from}`;
 }
