@@ -7,9 +7,20 @@
     </head>
     <body>
         <div class="card" id="card">
+            <p class="to-display"></p>
             <p id="greeting-display"></p>
+            <p class="from-display"></p>
         </div>
-        <button id="btn">Write card</button>
+
+        <form id="submit">
+            <label for="to">To:</label>
+            <input type="text" name="to">
+            <label for="from">From:</label>
+            <input type="text" name="from">
+            <button id="btn">Write card</button>
+
+        </form>
+
         <script src="index.js"></script>
     </body>
 </html>

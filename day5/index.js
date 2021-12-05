@@ -1,7 +1,18 @@
 const greetingDisplay = document.getElementById("greeting-display")
-const btn = document.getElementById("btn")
-const bauble = document.getElementById("bauble")
-btn.addEventListener("click", writeGreeting)
+const toDisplay = document.querySelector('.to-display');
+const fromDisplay = document.querySelector('.from-display');
+
+const form = document.getElementById('submit');
+form.addEventListener("submit", (e) => {
+
+    let newData = new FormData(e.target);
+    let to = newData.get('to');
+    let from = newData.get('from');
+    
+    e.preventDefault();
+    writeGreeting(to, from);
+});
+
 
 const greetings = [
     "Santa Claus is coming to town!",
@@ -11,14 +22,9 @@ const greetings = [
     "Jingle all the way!",
 ]
 
-function writeGreeting() {
-    greetingDisplay.textContent = greetings[1];
-    let randomNum = Math.floor(Math.random())
+function writeGreeting(to, from) {
+    let randomNum = Math.floor((Math.random() * greetings.length) + 1);
+    greetingDisplay.textContent = greetings[randomNum];
+    toDisplay.textContent = `To: ${to}`;
+    fromDisplay.textContent = `From: ${from}`;
 }
-
-// Task:
-// Write a function to display a random greeting in the card.
-
-// Stretch goals:
-// - Allow the user to input to and from names.
-// - Add an input for custom messages.
