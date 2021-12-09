@@ -11,7 +11,6 @@ function deckTheHalls() {
     moreBtn.classList.toggle('hidden');
     moreBtn.addEventListener('click', () => {
         let randomNum = Math.floor(Math.random() * emojiArray.length);
-        console.log(randomNum)
         house.textContent += emojiArray[randomNum];
     })
 }
