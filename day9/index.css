@@ -16,7 +16,8 @@
   .container {
       display: flex;
       justify-content: center;
-      align-items: center
+      align-items: center;
+      flex-wrap: nowrap;
   }
   
   body {
@@ -81,3 +82,26 @@
       background-color: var(--snow);
   }
   
+
+  .hidden {
+      display: none;
+  }
+
+  .btn {
+      border: none;
+      background-color: var(--light-green);
+      padding: 1em 2em;
+      border-radius: 15px;
+      margin-top: 0.4em;
+      color: var(--snow);
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+      transition: 1s;
+  }
+
+  .btn:hover {
+      cursor: pointer;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px -1px, rgba(0, 0, 0, 0.08) 0px 2px 4px -1px;
+      transform: translateY(3px);
+  }
