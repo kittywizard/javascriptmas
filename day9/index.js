@@ -3,8 +3,7 @@ const decorator = document.getElementById("decorator")
 decorator.addEventListener("click", deckTheHalls)
 
 function deckTheHalls() {
-  // Task:
-  // Write a function to add decorations (e.g. ☃️, 🎄, etc) next to the house when the switch is toggled. 
+    decorator.checked ? house.textContent = `❄️🎄 🏡 🎄❄️` : house.textContent = `🏡`;
 }
 
 // Stretch goals:
