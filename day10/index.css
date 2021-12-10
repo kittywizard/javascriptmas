@@ -33,9 +33,36 @@
       border-radius: 5px;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
+
+  .festivities {
+      font-size: 4rem;   
+  }
+
+  .fully-loaded {
+      background: linear-gradient(180deg,rgb(250,250,250), rgb(100,100,100));
+  }
   
   meter {
       height: 50px;
       width: 200px;
-      
   }
+
+/*
+      METER CHROME COLORS
+*/
+
+meter::-webkit-meter-bar {background: #e6e6e9;} /*background color of bar*/
+meter::-webkit-meter-optimum-value {background: var(--light-green);}
+meter::-webkit-meter-suboptimum-value{background:var(--gold);}
+meter::-webkit-meter-even-less-good-value{background:var(--wine-red);}
+
+/*
+      METER FIREFOX COLORS
+*/
+
+/* meter::-moz-meter-bar {
+    background: var(--wine-red);
+}  */
+
+meter::-moz-meter-optimum-value {background: var(--light-green);} 
+meter::-moz-meter-suboptimum-value{background:var(--gold);} 

@@ -1,9 +1,11 @@
 const meter = document.getElementById("meter");
 const headline = document.querySelector('.headline');
+const container = document.querySelector('.container');
+const festivities = document.querySelector('.festivities');
 
 function loadMeter() {
     let loading = setInterval(() => {
-        meter.value += 1;
+        meter.value += 5;
         console.log(`${meter.value} / ${meter.max}`);
 
         if (meter.value === meter.max) {
@@ -17,10 +19,13 @@ function loadMeter() {
 loadMeter();
 
 function loaded() {
-    console.log('loaded');
-
     headline.textContent = "Loaded!";
-    meter.style.display = "none";
+    container.style.display = "none";
+
+    festivities.textContent = '🎄❄️✨🎁⛄';
+
+    //background: linear-gradient(180deg,rgb(250,250,250), rgb(100,100,100));
+
 }
 
 
