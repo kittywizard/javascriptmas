@@ -21,6 +21,7 @@
       text-align: center;
       color: var(--dark-green);
       background-color: var(--snow);
+      font-family: 'Barlow Condensed', sans-serif;
   }
   
   .container {
