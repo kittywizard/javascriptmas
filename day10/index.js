@@ -23,15 +23,5 @@ function loaded() {
     container.style.display = "none";
 
     festivities.textContent = '🎄❄️✨🎁⛄';
-
-    //background: linear-gradient(180deg,rgb(250,250,250), rgb(100,100,100));
-
+    document.body.classList.add('fully-loaded');
 }
-
-
-// Task:
-// Write a function to wire up the festivity loader to reflect how many days are remaining until Christmas!
-
-// Stretch goals:
-// - Animate the loader.
-// - Change the colors depending on the meter's value.

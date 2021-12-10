@@ -36,10 +36,15 @@
 
   .festivities {
       font-size: 4rem;   
+      background-color: rgba(250, 250, 250, 0.3);
+      padding: 1em;
+      border-radius: 50px;
   }
 
   .fully-loaded {
-      background: linear-gradient(180deg,rgb(250,250,250), rgb(100,100,100));
+      background-image: url(./img/snow-bg.jpg);
+      background-repeat: no-repeat;
+      object-fit: cover;
   }
   
   meter {
