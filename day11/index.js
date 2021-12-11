@@ -9,13 +9,34 @@ const imgs = [
     {src: "imgs/doggies.jpg",
     alt: "small black dog and small beige dog looking out the window at snow next to Christmas wreath"}]
 
-let imgNum = 0
-  
-// Task:
-// - Wire up the buttons to switch through the images in the imgs array. 
-// - Make sure that the gallery works no matter how many images are added.
-// - Decide/implement what to do when you reach either end of the array - do nothing and disable buttons, loop back round to the other end, or something else?
-// - Remember to also update the alt tags.
+let imgNum = 0;
+
+next.addEventListener('click', (e) => {
+
+    imageCarousel("next");
+    e.preventDefault();
+});
+
+previous.addEventListener('click', (e) => {
+
+    imageCarousel("prev");
+    e.preventDefault();
+});
+
+function imageCarousel(direction) {
+
+    direction == 'next' ? imgNum++ : imgNum--;
+
+    if(imgNum >= imgs.length) {
+        imgNum = 0;
+    } else if (imgNum == -1) {
+        imgNum = imgs.length - 1;
+    }
+
+    img.src = imgs[imgNum].src;
+    img.alt = imgs[imgNum].alt;
+
+}
 
 // Stretch goals:
 // - Add transitions for a smooth effect.
