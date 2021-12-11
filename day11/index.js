@@ -12,13 +12,13 @@ const imgs = [
 let imgNum = 0;
 
 next.addEventListener('click', (e) => {
-
+    img.classList.remove('img-fadein');
     imageCarousel("next");
     e.preventDefault();
 });
 
 previous.addEventListener('click', (e) => {
-
+    img.classList.remove('img-fadein');
     imageCarousel("prev");
     e.preventDefault();
 });
@@ -35,8 +35,7 @@ function imageCarousel(direction) {
 
     img.src = imgs[imgNum].src;
     img.alt = imgs[imgNum].alt;
-
-}
+    }
 
 // Stretch goals:
 // - Add transitions for a smooth effect.

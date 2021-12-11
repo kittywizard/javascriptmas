@@ -64,4 +64,22 @@
   .material-icons-outlined {
       font-size: 30px;
   }
-  
+
+  /* 
+        messing with animations
+  */
+
+  .img-fadein {
+    animation-duration: 2s;
+    animation-name: fade-in;
+  }
+
+  @keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
