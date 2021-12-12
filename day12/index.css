@@ -15,11 +15,12 @@
   body {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
       height: 100vh;
       color: var(--dark-green);
       background-color: var(--gold);
+      font-family: 'Barlow Condensed', sans-serif;
   }
   
   h1 { 
