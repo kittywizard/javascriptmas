@@ -84,3 +84,19 @@
       cursor: pointer;
   }
   
+
+  .remove-icon {
+      margin-left: 1em;
+      margin-top: 0;
+      background-color: var(--wine-red);
+      color: var(--snow);
+      padding: 2px 3px 3px 3px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 0.75em;
+  }
+
+  .remove-icon:hover,
+  .remove-icon:focus {
+      background-color: var(--dark-green);
+  }
