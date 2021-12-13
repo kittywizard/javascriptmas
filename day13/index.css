@@ -97,4 +97,14 @@
       cursor: pointer;  
   }
   
-  
+  .recipe-link {
+      margin-top: 1em;
+        text-decoration: none;
+        display: block;
+        color: var(--dark-green);
+  }
+
+  .recipe-link:hover,
+  .recipe-link:active {
+      color: var(--light-green);
+  }
