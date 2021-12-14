@@ -21,6 +21,7 @@
       text-align: center;
       color: var(--dark-green);
       background-color: var(--snow);
+      font-family: sans-serif;
   }
   
   .elf-hangout-zone {
