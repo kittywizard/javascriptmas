@@ -23,7 +23,15 @@ const greetingsArr = [
 
 function translate(){
     greetingsArr.forEach(greeting => {
-        if(greeting.language == languageSelector.value) greetingDisplay.textContent = greeting.greeting;
+        if(greeting.language == languageSelector.value) {
+            
+            greetingDisplay.textContent = greeting.greeting;
+            greetingDisplay.classList.add('transition');
+
+            let timing = setInterval(() => {
+                greetingDisplay.classList.remove('transition');
+            }, 2000);
+        }
     });
 }
 

@@ -21,7 +21,7 @@
       text-align: center;
       color: var(--dark-green);
       background-color: var(--snow);
-      font-family: 'Barlow Condensed', sans-serif;
+      font-family: 'Montserrat', sans-serif;
   }
   
   .container {
@@ -59,4 +59,21 @@
       color: var(--dark-green);    
       cursor: pointer;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+  }
+
+  .transition {
+      animation: message 2s;
+  }
+
+  @keyframes message {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
   }
