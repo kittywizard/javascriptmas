@@ -1,7 +1,16 @@
 const niceList = document.getElementById("nice-list")
 const naughtyList = document.getElementById("naughty-list")
-const btn = document.getElementById("btn")
+
+const nameInput = document.getElementById('name');
+const goodOrBad = document.getElementById('list');
+
+const btn = document.getElementById("btn");
 btn.addEventListener("click", sort)
+
+const addName = document.getElementById('add-btn');
+addName.addEventListener('click', add);
+
+let hasBeenGood;
 
 const sorteesArr = [
     {
@@ -23,19 +32,22 @@ const sorteesArr = [
 ];
 
 function sort() {
-    console.log(sorteesArr)
-
-    //need to display each on its own line
-    sorteesArr.forEach(sortee => {
+        sorteesArr.forEach(sortee => {
         let li = document.createElement('li');
         li.textContent = sortee.name;
         sortee.hasBeenGood ? niceList.appendChild(li) : naughtyList.appendChild(li);
-    })
+    });
 }
 
-// Task: 
-// - Write the JavaScript to sort the people in sorteesArr into the naughty and nice lists, according to whether they have been good or not. Then display the names in the relevant place in the DOM.
+function add(e) {
+    e.preventDefault();
 
-// Stretch goals:
-// - Add the option to add new names to the sorteesArr.
-// - Make it possible to switch people to the other list.
+    goodOrBad.checked ? hasBeenGood = true : hasBeenGood = false; 
+
+    sorteesArr.push({
+        name: nameInput.value,
+        hasBeenGood: hasBeenGood
+    });
+
+    sort();
+}
