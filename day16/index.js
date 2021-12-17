@@ -1,5 +1,6 @@
 const ageSelector = document.getElementById("age-selector")
 const genreSelector = document.getElementById("genre-selector")
+const form = document.getElementById('form');
 
 const btn = document.getElementById("btn")
 const suggestedMovie = document.getElementById("suggested-movie")
@@ -25,8 +26,19 @@ const moviesArr = [
         age: "PG",
         genre: "Romance"
     }
-]
+];
 
+btn.addEventListener('click', () => {
+    console.log('run')
+    let newData = new FormData(form);
+    console.log(newData.values);
+
+    //movieSelector(newData);
+});
+
+function movieSelector(e) {
+    console.log(e)
+}
 // Task: 
 // - Write a function to select a suitable movie based on the age group and genre provided.
 //  - Display it in the suggested-movie paragraph when the button is clicked.
