@@ -83,3 +83,8 @@
       transform: scale(1.03)
   }
 
+  input {
+      background-color: var(--wine-red);
+      color: var(--snow);
+  }
+
