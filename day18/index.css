@@ -21,6 +21,7 @@
       text-align: center;
       color: var(--snow);
       background-color: var(--bright-red);
+      font-family: 'Montserrat', sans-serif;
   }
   
   .checklist {
@@ -51,6 +52,58 @@
     font-weight: normal;
   }
   
+  
+  /*
+    custom checkboxes here
+  */
+
+  .checklist input {
+      position: absolute;
+      opacity: 0;
+  }
+
+  .checkbox {
+      content: '';
+      background-color: var(--gold);
+      border-radius: 100%;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: relative;
+      top:0;
+      left: 4px;
+      cursor: pointer;
+      margin-right: 1em;
+  }
+
+  /* selects all the spans within the label container on hover/click  */
+  .custom:hover input[type=checkbox] ~ .checkbox,
+  .custom input[type=checkbox]:checked ~ .checkbox
+ {
+    background-color: var(--wine-red);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+    /* Show the indicator (dot/circle) when checked */
+.custom input[type=checkbox]:checked ~ .checkbox:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .custom .checkbox:after {
+    left: 5px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: var(--snow);
+  }
   
   /* Task:
   - Write the CSS to create custom checkboxes for our shopping list.
