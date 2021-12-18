@@ -52,7 +52,6 @@
     font-weight: normal;
   }
   
-  
   /*
     custom checkboxes here
   */
@@ -65,7 +64,7 @@
   .checkbox {
       content: '';
       background-color: var(--gold);
-      border-radius: 100%;
+      border-radius: 20px;
       display: inline-block;
       width: 20px;
       height: 20px;
@@ -101,13 +100,6 @@
     top: 5px;
     width: 10px;
     height: 10px;
-    border-radius: 100%;
+    border-radius: 5px;
     background-color: var(--snow);
   }
-  
-  /* Task:
-  - Write the CSS to create custom checkboxes for our shopping list.
-  
-  Stretch goals: 
-  - Add a different random check for each item.
-  - Use JavaScript to match the custom check to the item listed, e.g. socks would have socks as the checkmark. */
