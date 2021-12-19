@@ -1,14 +1,43 @@
-const btn = document.getElementById("btn")
-// btn.addEventListener("click", findYum)
+let url = "https://foodish-api.herokuapp.com/api/images/dessert";
+let foodHolder = document.getElementById('foodHolder');
+let backBtn = document.querySelector('.back-btn');
 
-/* Task:
-Call the Foodish API (https://foodish-api.herokuapp.com/) and display random images of desserts on the click of a button.
+const btn = document.getElementById("btn") 
 
-Specific URL to get a random dessert image: 
-https://foodish-api.herokuapp.com/api/images/dessert
+btn.addEventListener("click", () => {    
+    findYum(url);
+});
 
-Stretch goals: 
-- Show multiple desserts.
-- Add the functionality to go back to the previous image.
-*/
+let img; //so we can check to see if its undefined or not
 
+async function findYum(url) {
+
+    let fetchImage = await fetch(url);
+    let json = await fetchImage.json();
+
+    displayYum(json.image);
+}
+
+function displayYum(url) {
+    
+    if(img !== undefined) {
+        let prevImage = img.src;
+        backBtn.classList.remove('hidden');
+        backBtn.addEventListener('click', () => {goBack(prevImage)})
+    }
+
+    img = document.createElement('img');
+    img.src = url;
+
+    foodHolder.textContent = ''; //"replace" previous image
+    foodHolder.appendChild(img); 
+}
+
+function goBack(prevImage) {
+
+    img = document.createElement('img');
+    img.src = prevImage;
+
+    foodHolder.textContent = ''; //"replace" previous image
+    foodHolder.appendChild(img); 
+}
