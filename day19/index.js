@@ -8,7 +8,7 @@ btn.addEventListener("click", () => {
     findYum(url);
 });
 
-let img; //so we can check to see if its undefined or not
+let img, prevImage; //so we can check to see if its undefined or not
 
 async function findYum(url) {
 
@@ -21,16 +21,14 @@ async function findYum(url) {
 function displayYum(url) {
     
     if(img !== undefined) {
-        let prevImage = img.src;
+        prevImage = img.src;
         backBtn.classList.remove('hidden');
         backBtn.addEventListener('click', () => {goBack(prevImage)})
     }
-
     img = document.createElement('img');
-    img.src = url;
+    img.src = url
 
-    foodHolder.textContent = ''; //"replace" previous image
-    foodHolder.appendChild(img); 
+    swapImage(url, prevImage);
 }
 
 function goBack(prevImage) {
@@ -41,3 +39,4 @@ function goBack(prevImage) {
     foodHolder.textContent = ''; //"replace" previous image
     foodHolder.appendChild(img); 
 }
+
