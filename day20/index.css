@@ -15,7 +15,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--gold)
+  background-color: var(--gold);
+  font-family: sans-serif;
 }
 
 .controls {
@@ -74,7 +75,7 @@ input {
   border-top-right-radius: 75px;
   height: 1em;
   width: 1em;
-  background: var(--color);
+  background-color: var(--color);
   margin: 2.2em 2em 0;
 }
 
